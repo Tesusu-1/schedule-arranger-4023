@@ -20,7 +20,7 @@ passport.deserializeUser((obj, done) => done(null, obj));
 passport.use(new GitHubStrategy({
     clientID: GITHUB_CLIENT_ID,
     clientSecret: GITHUB_CLIENT_SECRET,
-    callbackURL: process.env.CALLBACK_URL || 'http://localhost:8000/auth/github/callback'
+    callbackURL: process.env.CALLBACK_URL || 'https://tesusu-1-my-web-schedule-arranger.onrender.com/'
   },
   (accessToken, refreshToken, profile, done) => {
     process.nextTick(async () => {
